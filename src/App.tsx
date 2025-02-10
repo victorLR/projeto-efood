@@ -1,24 +1,29 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import React from 'react'
-import EmailForm from './components/EmailForm'
-import EmailList from './components/EmailList'
-import {
-  Container,
-  H1,
-  FormContainer,
-  ListContainer
-} from './components/styles'
+import Head from './components/Head'
+import { CssGlobal } from './styles'
+import FoodList from './components/FoodList'
+import Footer from './components/Footer'
+
+const caminhos = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <>
+        <Head />
+        <FoodList />
+        <Footer />
+      </>
+    )
+  }
+])
 
 const App: React.FC = () => {
   return (
-    <Container>
-      <H1>Cadastro de Emails</H1>
-      <FormContainer>
-        <EmailForm />
-      </FormContainer>
-      <ListContainer>
-        <EmailList />
-      </ListContainer>
-    </Container>
+    <>
+      <CssGlobal />
+      <RouterProvider router={caminhos} />
+    </>
   )
 }
 
