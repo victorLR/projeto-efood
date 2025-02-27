@@ -1,6 +1,6 @@
-import Foods from '../Foods'
+import Products from '../Products'
 import { List, Container } from './styles'
-import Produto from '../../models/Produtos'
+import Produto from '../../../../models/PerfilProducts'
 
 type Props = {
   title?: string
@@ -13,7 +13,7 @@ const FoodList = ({ title, produtos }: Props) => (
       <h2>{title}</h2>
       <List>
         {produtos.map((produto) => (
-          <Foods
+          <Products
             key={produto.id}
             title={produto.title}
             infos={produto.infos}

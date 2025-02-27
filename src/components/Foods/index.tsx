@@ -7,6 +7,7 @@ import {
   DivCard,
   DivSub,
   ImageS,
+  Img,
   Infos,
   Span,
   StarContainer,
@@ -22,7 +23,7 @@ type Props = {
 
 const Foods = ({ title, description, infos, image }: Props) => (
   <DivCard>
-    <img src={image} alt={title} />
+    <Img src={image} alt={title} />
     <Infos>
       {infos.map((info) => (
         <Tag key={info}>{info}</Tag>
@@ -39,7 +40,7 @@ const Foods = ({ title, description, infos, image }: Props) => (
     <Button
       title="clique aqui e veja mais produtos como este"
       type="link"
-      to="/descricao"
+      to="/Perfil"
     >
       Saiba mais
     </Button>

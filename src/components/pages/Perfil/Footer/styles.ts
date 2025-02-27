@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { cores } from '../../../../styles'
 
 export const FooterContainer = styled.div`
   background-color: ${cores.bege};
@@ -10,6 +10,7 @@ export const FooterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 120px;
 `
 
 export const LogoEfood = styled.img`
