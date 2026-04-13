@@ -371,7 +371,6 @@ const Cart = () => {
                 />
               </div>
             </Row>
-
             <CheckoutButton
               type="submit"
               disabled={
