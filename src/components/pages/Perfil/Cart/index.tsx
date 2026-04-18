@@ -297,7 +297,13 @@ const Cart = () => {
               id="cardName"
               value={payment.cardName}
               onChange={({ target }) =>
-                setPayment({ ...payment, cardName: target.value.replace(/[^a-zA-Z\u00C0-\u00FF\s]/g, "") })
+                setPayment({
+                  ...payment,
+                  cardName: target.value.replace(
+                    /[^a-zA-Z\u00C0-\u00FF\s]/g,
+                    ''
+                  )
+                })
               }
               required
             />
